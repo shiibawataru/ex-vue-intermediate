@@ -32,12 +32,19 @@ export default class TeamDetail extends Vue {
   private currentTeam!: Team;
 
   created(): void {
+    /**
+     * Vuexストア内IDを取得し返す
+     *
+     */
     const teamId = parseInt(this["$route"].params.id);
     console.dir("ID:" + teamId);
     this.currentTeam = this["$store"].getters.getTeamById(teamId);
     console.dir("チーム名:" + this.currentTeam.teamName);
   }
-
+  /**
+   * チーム一覧画面へ戻る.
+   *
+   */
   backpage(): void {
     this["$router"].push("/ex01");
   }

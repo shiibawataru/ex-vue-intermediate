@@ -1,5 +1,9 @@
 import { format } from "date-fns";
 
+/**
+ * 球団を表すクラスです.
+ *
+ */
 export class Team {
   constructor(
     // ID
