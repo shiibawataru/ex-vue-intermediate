@@ -154,6 +154,7 @@ export default new Vuex.Store({
   modules: {},
   getters: {
     /**
+     * 球団情報を返す.
      *
      * @param state ステートオブジェクト
      * @returns 詳細情報
@@ -163,6 +164,7 @@ export default new Vuex.Store({
     },
 
     /**
+     * IDから球団情報1件を返す
      *
      * @param state ステート
      * @returns

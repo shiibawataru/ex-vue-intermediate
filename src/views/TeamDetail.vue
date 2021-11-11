@@ -11,14 +11,14 @@
       </div>
       <div>
         <strong>発足日</strong><br />
-        {{ currentTeam.inauguration }}
+        {{ currentTeam.formatInauguration }}
       </div>
       <div>
         <strong>歴史</strong><br />
         <pre> {{ currentTeam.history }}</pre>
       </div>
 
-      <button type="button">戻る</button>
+      <button type="button" v-on:click="backpage">戻る</button>
     </form>
   </div>
 </template>
@@ -36,6 +36,10 @@ export default class TeamDetail extends Vue {
     console.dir("ID:" + teamId);
     this.currentTeam = this["$store"].getters.getTeamById(teamId);
     console.dir("チーム名:" + this.currentTeam.teamName);
+  }
+
+  backpage(): void {
+    this["$router"].push("/ex01");
   }
 }
 </script>
